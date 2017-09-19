@@ -56,14 +56,16 @@ namespace Task_12
                     localRoot = new Element(value);
                     return;
                 }
-                Program.ComparisonTree++;
+                
                 if (localRoot.Value > value)
                 {
                     AddToTreeRec(value, ref localRoot.Right);
+                    Program.ComparisonTree++;
                 }
                 else
                 {
                     AddToTreeRec(value, ref localRoot.Left);
+                    Program.ComparisonTree++;
                 }
             }
 
